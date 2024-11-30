@@ -112,21 +112,21 @@ const LoginPage = () => {
                 <div className="mb-5">
                   <label
                     className=" text-sm mb-1 dark:text-white"
-                    htmlFor="email"
+                    htmlFor="username"
                   >
                     {lang.email}
                   </label>
                   <div className="flex dark:text-white items-center gap-2 border-2 rounded border-gray-600 dark:border-gray-400 px-2 py-1">
                     <EmailIcon />
                     <input
-                      id="email"
-                      {...register("email")}
+                      id="username"
+                      {...register("userName")}
                       className="w-full outline-none  h-8 dark:text-white  dark:bg-gray-800"
                       type="text"
                     />
-                    {errors?.email && (
+                    {errors?.userName && (
                       <p className="text-red-500 text-sm">
-                        {errors.email.message}
+                        {errors.userName.message}
                       </p>
                     )}
                   </div>

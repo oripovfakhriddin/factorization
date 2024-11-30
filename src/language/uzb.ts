@@ -10,6 +10,7 @@ const UZB = {
   totalUsers: "Jami foydalanuvchilar soni",
   search: "Qidirish",
   edit: "Tahrirlash",
+  username: "Foydalanuvchi nome",
   delete: "O'chirish",
   changePassword: "Parolni o'zgartirish",
   showing: "Ko'rinmoqda",

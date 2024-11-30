@@ -1,9 +1,8 @@
 import * as yup from "yup";
 
 const loginSchema = yup.object().shape({
-  email: yup
+  userName: yup
     .string()
-    .email("Email kiritilishi shart!")
     .required("Katakni to'dirish shart!"),
   password: yup
     .string()

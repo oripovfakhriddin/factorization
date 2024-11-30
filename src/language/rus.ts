@@ -12,6 +12,7 @@ const RUS = {
   totalUsers: "Всего пользователей",
   search: "Поиск",
   edit: "Редактировать",
+  username: "Имя пользователя",
   delete: "Удалить",
   changePassword: "Изменить пароль",
   showing: "Показано",

@@ -7,10 +7,8 @@ import { toast } from "react-toastify";
 import { yupResolver } from "@hookform/resolvers/yup";
 import OpenEyeIcon from "../../../assets/icons/open-eye-icon";
 import CloseEyeIcon from "../../../assets/icons/close-eye-icon";
-import EmailIcon from "../../../assets/icons/email-icon";
 import PasswordIcon from "../../../assets/icons/password-icon";
 import PersonIcon from "../../../assets/icons/person-icon";
-import DateIcon from "../../../assets/icons/date-icon";
 import registerSchema from "../../../schema/register";
 import RegisterFormValues from "../../../types/register";
 import { ENDPOINT, TOKEN, USER } from "../../../constants";
@@ -97,91 +95,25 @@ const RegisterPage = () => {
                 onSubmit={handleSubmit(onSubmit)}
                 className="flex flex-col md:grid md:grid-cols-2 md:gap-5"
               >
-                <div className="mb-5">
+                <div className="mb-5 col-span-2">
                   <label
                     className="dark:text-white text-sm mb-1"
-                    htmlFor="firstName"
+                    htmlFor="username"
                   >
-                    {lang.firstName}
+                    {lang.username}
                   </label>
                   <div className="flex items-center gap-2 border-2 dark:text-white rounded border-gray-600 dark:border-gray-400 px-2 py-1">
                     <PersonIcon width="32px" height="32px" />
                     <input
-                      {...register("firstName")}
+                      {...register("userName")}
                       id="firstName"
                       className="w-full outline-none h-8 dark:text-white dark:bg-gray-800"
                       type="text"
                     />
                   </div>
-                  {errors?.firstName && (
+                  {errors?.userName && (
                     <p className="text-red-500 text-sm">
-                      {errors.firstName.message}
-                    </p>
-                  )}
-                </div>
-                <div className="mb-5">
-                  <label
-                    className="dark:text-white text-sm mb-1"
-                    htmlFor="lastName"
-                  >
-                    {lang.lastName}
-                  </label>
-                  <div className="flex items-center gap-2 border-2 rounded dark:text-white border-gray-600 dark:border-gray-400 px-2 py-1">
-                    <PersonIcon width="32px" height="32px" />
-                    <input
-                      {...register("lastName")}
-                      id="lastName"
-                      className="w-full outline-none h-8 dark:text-white dark:bg-gray-800"
-                      type="text"
-                    />
-                  </div>
-                  {errors?.lastName && (
-                    <p className="text-red-500 text-sm">
-                      {errors.lastName.message}
-                    </p>
-                  )}
-                </div>
-                <div className="mb-5">
-                  <label
-                    className="dark:text-white text-sm mb-1"
-                    htmlFor="birthDate"
-                  >
-                    {lang.birthdate}
-                  </label>
-                  <div className="flex items-center gap-2 border-2 rounded dark:text-white border-gray-600 dark:border-gray-400 px-2 py-1">
-                    <DateIcon />
-                    <input
-                      {...register("birthDate")}
-                      id="birthDate"
-                      className="w-full outline-none h-8 dark:text-white dark:bg-gray-800"
-                      type="date"
-                    />
-                  </div>
-                  {errors?.birthDate && (
-                    <p className="text-red-500 text-sm">
-                      {errors.birthDate.message}
-                    </p>
-                  )}
-                </div>
-                <div className="mb-5">
-                  <label
-                    className="dark:text-white text-sm mb-1"
-                    htmlFor="email"
-                  >
-                    {lang.email}
-                  </label>
-                  <div className="flex items-center gap-2 border-2 rounded dark:text-white border-gray-600 dark:border-gray-400 px-2 py-1">
-                    <EmailIcon />
-                    <input
-                      {...register("email")}
-                      id="email"
-                      className="w-full outline-none h-8 dark:text-white dark:bg-gray-800"
-                      type="text"
-                    />
-                  </div>
-                  {errors?.email && (
-                    <p className="text-red-500 text-sm">
-                      {errors.email.message}
+                      {errors.userName.message}
                     </p>
                   )}
                 </div>

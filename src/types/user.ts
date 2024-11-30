@@ -1,8 +1,6 @@
 interface User {
   id: number;
-  untilBirthDate: number;
-  firstName: string;
-  lastName: string;
+  userName: string;
   birthDate: string;
   role: string;
   email: string;

@@ -1,4 +1,4 @@
-import { Fragment, useContext, useEffect, useState } from "react";
+import { Fragment, useContext, useState } from "react";
 import { Link, NavLink, Outlet } from "react-router-dom";
 import ThemeToggle from "../../theme-toggle";
 import PersonIcon from "../../../assets/icons/person-icon";
@@ -9,8 +9,6 @@ import CloseIcon from "../../../assets/icons/close-icon";
 import LogOutModal from "../../modals/logout-modal";
 import { LanguageContext } from "../../../context/language";
 import { AuthContext } from "../../../context/auth";
-import { useAppDispatch, useAppSelector } from "../../../redux/hooks";
-import { getUsers } from "../../../redux/slices/user";
 import DashboardIcon from "../../../assets/icons/dashboard-icon";
 import UsersIcon from "../../../assets/icons/users-icon";
 
@@ -20,12 +18,6 @@ const AdminLayoutPage = () => {
   const [isLogOutModal, setIsLogOutModal] = useState(false);
   const { lang, langType, changeLanguage } = useContext(LanguageContext);
   const { user } = useContext(AuthContext);
-  const { total } = useAppSelector((state) => state.user);
-  const dispatch = useAppDispatch();
-
-  useEffect(() => {
-    dispatch(getUsers({ size: "10", currentPage: "1", search: "" }));
-  }, [dispatch]);
 
   const toggleIsSidebar = () => {
     setIsSidebar(!isSidebar);
@@ -114,13 +106,7 @@ const AdminLayoutPage = () => {
                     className="text-sm text-gray-900 dark:text-white"
                     role="none"
                   >
-                    {user?.firstName}
-                  </p>
-                  <p
-                    className="text-sm font-medium text-gray-900 truncate dark:text-gray-300"
-                    role="none"
-                  >
-                    {user?.lastName}
+                    {user?.userName}
                   </p>
                 </div>
                 <ul className="py-1" role="none">
@@ -195,7 +181,7 @@ const AdminLayoutPage = () => {
                   {lang.users}
                 </span>
                 <span className="inline-flex items-center justify-center w-3 h-3 p-3 ms-3 text-sm font-medium text-blue-800 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-300">
-                  {total}
+                  {0}
                 </span>
               </NavLink>
             </li>

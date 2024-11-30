@@ -11,6 +11,7 @@ const ENG = {
   account: "Profile",
   search: "Search",
   edit: "Edit",
+  username: "Username",
   delete: "Delete",
   changePassword: "Change password",
   showing: "Showing",
