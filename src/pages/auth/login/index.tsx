@@ -2,7 +2,6 @@ import { Fragment, useContext, useState } from "react";
 import LoginImg from "/pictures/logo-login-background.png";
 import OpenEyeIcon from "../../../assets/icons/open-eye-icon";
 import CloseEyeIcon from "../../../assets/icons/close-eye-icon";
-import EmailIcon from "../../../assets/icons/email-icon";
 import PasswordIcon from "../../../assets/icons/password-icon";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../context/auth";
@@ -18,6 +17,7 @@ import { ENDPOINT, TOKEN, USER } from "../../../constants";
 import { toast } from "react-toastify";
 import { LanguageContext } from "../../../context/language";
 import ThemeToggle from "../../../components/theme-toggle";
+import PersonIcon from "../../../assets/icons/person-icon";
 
 const LoginPage = () => {
   const navigate = useNavigate();
@@ -58,11 +58,7 @@ const LoginPage = () => {
       localStorage.setItem(USER, JSON.stringify(data.user));
       setIsAuthenticated(true);
       setUser(data.user);
-      if (data?.user?.role === "ADMIN") {
-        navigate("/admin");
-      } else {
-        navigate("/");
-      }
+      navigate("/admin");
     } catch (err) {
       const error = err as AxiosError;
       const message = error.response?.data as ErrorResponse;
@@ -109,7 +105,7 @@ const LoginPage = () => {
                 {lang.login}
               </h2>
               <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col">
-                <div className="mb-5">
+                <div className="">
                   <label
                     className=" text-sm mb-1 dark:text-white"
                     htmlFor="username"
@@ -117,21 +113,21 @@ const LoginPage = () => {
                     {lang.email}
                   </label>
                   <div className="flex dark:text-white items-center gap-2 border-2 rounded border-gray-600 dark:border-gray-400 px-2 py-1">
-                    <EmailIcon />
+                    <PersonIcon width="32px" height="32px" />
                     <input
                       id="username"
                       {...register("userName")}
                       className="w-full outline-none  h-8 dark:text-white  dark:bg-gray-800"
                       type="text"
                     />
-                    {errors?.userName && (
-                      <p className="text-red-500 text-sm">
-                        {errors.userName.message}
-                      </p>
-                    )}
                   </div>
                 </div>
-                <div className="mb-5">
+                {errors?.userName && (
+                  <p className="text-red-500 text-sm">
+                    {errors.userName.message}
+                  </p>
+                )}
+                <div className="mt-5">
                   <label
                     className="text-sm mb-1 dark:text-white"
                     htmlFor="password"
@@ -146,11 +142,7 @@ const LoginPage = () => {
                       className="w-full outline-none h-8 dark:text-white  dark:bg-gray-800"
                       type={isPasswordToogle ? "text" : "password"}
                     />
-                    {errors?.password && (
-                      <p className="text-red-500 text-sm">
-                        {errors.password.message}
-                      </p>
-                    )}
+
                     <button
                       className="outline-none p-1 rounded-md transition-all dark:text-white hover:bg-slate-200"
                       onClick={(e) => {
@@ -162,9 +154,14 @@ const LoginPage = () => {
                     </button>
                   </div>
                 </div>
+                {errors?.password && (
+                  <p className="text-red-500 text-sm">
+                    {errors.password.message}
+                  </p>
+                )}
                 <button
                   type="submit"
-                  className="bg-black rounded-md text-white p-2 mb-4 dark:bg-blue-800"
+                  className="bg-black rounded-md text-white p-2 my-4 dark:bg-blue-800"
                 >
                   {loading ? `${lang.waiting}...` : lang.login}
                 </button>

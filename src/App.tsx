@@ -4,7 +4,6 @@ import LoginPage from "./pages/auth/login";
 import RegisterPage from "./pages/auth/register";
 import AdminLayoutPage from "./components/layout/admin";
 import AdminDashboardPage from "./pages/admin/dashboard";
-import AdminAccountPage from "./pages/admin/account";
 import { AuthContext } from "./context/auth";
 import PageNotFound from "./pages/page-not-found";
 
@@ -35,7 +34,7 @@ function App() {
             }
           >
             <Route index element={<AdminDashboardPage />} />
-            <Route path="accounts" element={<AdminAccountPage />} />
+            {/* <Route path="accounts" element={<AdminAccountPage />} /> */}
           </Route>
           <Route path="*" element={<PageNotFound />} />
         </Routes>
