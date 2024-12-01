@@ -1,7 +1,6 @@
 import { Fragment, useContext, useState } from "react";
 import { Link, NavLink, Outlet } from "react-router-dom";
 import ThemeToggle from "../../theme-toggle";
-import PersonIcon from "../../../assets/icons/person-icon";
 import LogOutIcon from "../../../assets/icons/log-out-icon";
 import Logo from "/pictures/logo.png";
 import HamburgerIcon from "../../../assets/icons/hamburger-icon";
@@ -10,7 +9,9 @@ import LogOutModal from "../../modals/logout-modal";
 import { LanguageContext } from "../../../context/language";
 import { AuthContext } from "../../../context/auth";
 import DashboardIcon from "../../../assets/icons/dashboard-icon";
-import UsersIcon from "../../../assets/icons/users-icon";
+import OneIcon from "../../../assets/icons/one-icon";
+import TwoIcon from "../../../assets/icons/two-icon";
+import ThreeIcon from "../../../assets/icons/three-icon";
 
 const AdminLayoutPage = () => {
   const [isSidebar, setIsSidebar] = useState(false);
@@ -60,7 +61,7 @@ const AdminLayoutPage = () => {
                   alt="Birthdate Logo"
                 />
                 <span className="self-center hidden md:block text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white">
-                  Birthdate
+                  Factorization
                 </span>
               </Link>
             </div>
@@ -153,7 +154,7 @@ const AdminLayoutPage = () => {
                 to="/admin"
                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 "
               >
-                <DashboardIcon height="24px" width="24px" />
+                <DashboardIcon height="32px" width="32px" />
                 <span className="ms-3">{lang.dashboard}</span>
               </NavLink>
             </li>
@@ -161,31 +162,39 @@ const AdminLayoutPage = () => {
             <li onClick={toggleIsSidebar}>
               <NavLink
                 end
-                to="/admin/accounts"
+                to="/admin/polard-rho"
                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 "
               >
-                <PersonIcon height="24px" width="24px" />
+                <OneIcon />
                 <span className="flex-1 ms-3 whitespace-nowrap">
-                  {lang.account}
+                  {lang.polardRho}
                 </span>
               </NavLink>
             </li>
             <li onClick={toggleIsSidebar}>
               <NavLink
                 end
-                to="/admin/users"
+                to="/admin/kvadrat-qoldiq"
                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 "
               >
-                <UsersIcon height="24px" width="24px" />
+                <TwoIcon />
                 <span className="flex-1 ms-3 whitespace-nowrap">
-                  {lang.users}
-                </span>
-                <span className="inline-flex items-center justify-center w-3 h-3 p-3 ms-3 text-sm font-medium text-blue-800 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-300">
-                  {0}
+                  {lang.squareReminder}
                 </span>
               </NavLink>
             </li>
-
+            <li onClick={toggleIsSidebar}>
+              <NavLink
+                end
+                to="/admin/ferma"
+                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 "
+              >
+                <ThreeIcon />
+                <span className="flex-1 ms-3 whitespace-nowrap">
+                  {lang.ferma}
+                </span>
+              </NavLink>
+            </li>
             <li>
               <button
                 onClick={toggleIsLogOutModal}
