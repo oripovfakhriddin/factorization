@@ -25,6 +25,8 @@ const ENG = {
   couldnotEditThisUser: "Could not edit this user!",
   couldnotPasswordEditThisUser: "Could not edit password this user!",
   numberOfDaysLeftUntilYourBirthday: "Number of days left until your birthday:",
+  number: "Number",
+  yourNumberPrime: "The number you entered is a prime number!",
   understandable: "Understandable",
   confirmation: "Confirmation",
   cancel: "Cancel",

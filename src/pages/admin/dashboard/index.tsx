@@ -33,10 +33,10 @@ const AdminDashboardPage = () => {
           </h2>
           <p className="dark:text-white indent-10">
             Bu usul oddiy sonlarni ikki kvadrat ayirmasi ko‘rinishida
-            ifodalashga asoslangan. Formulasi: N=a^2-b^2 bu yerda N
-            faktorizatsiya qilinayotgan son, a va b esa natural sonlar. Ishlash
-            prinsipi: a^2 sonini b^2 bilan bog‘lab, natijada a+b va a−b ni
-            topish.
+            ifodalashga asoslangan. Formulasi: N=a<sup>2</sup>-b<sup>2</sup> bu
+            yerda N faktorizatsiya qilinayotgan son, a va b esa natural sonlar.
+            Ishlash prinsipi: a<sup>2</sup> sonini b<sup>2</sup> bilan bog‘lab,
+            natijada a+b va a−b ni topish.
           </p>
         </li>
         <li className="mb-5">

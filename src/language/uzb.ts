@@ -20,6 +20,8 @@ const UZB = {
   showing: "Ko'rinmoqda",
   of: "dan",
   noUsers: "Foydalanuvchilar mahjud emas!",
+  number: "Raqam",
+  yourNumberPrime: "Siz kiritgan son tub!",
   noData: "Ma'lumot mavjud emas!",
   account: "Profil",
   contact: "Bog'lanish",
