@@ -33,6 +33,7 @@ const ENG = {
   of: "of",
   noUsers: "There are no users!",
   totalUsers: "Total users",
+  areYouSureYouWantToLogOut: "Are you sure you want to log out?",
   about: "About",
   logout: "Log out",
   login: "Login",

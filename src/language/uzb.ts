@@ -32,6 +32,7 @@ const UZB = {
   couldnotDeleteThisUser: "Ushbu foydalanuvchini o'chirib bo'lmadi!",
   couldnotEditThisUser: "Ushbu foydalanuvchini tahrirlab bo'lmadi!",
   couldnotPasswordEditThisUser: "Bu foydalanuvchi parolini tahrirlab bo‘lmadi!",
+  areYouSureYouWantToLogOut: "Tizimdan chiqishga ishonchingiz komilmi?",
   numberOfDaysLeftUntilYourBirthday: "Tug'ilgan kuningizga qolgan kunlar soni:",
   understandable: "Tushunarli",
   confirmation: "Tasdiqlash",

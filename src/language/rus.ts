@@ -17,6 +17,7 @@ const RUS = {
   squareReminder: "Квадратный остаток",
   ferma: "Ферма",
   factorizationAlgorithms: "Алгоритмы факторизации",
+  areYouSureYouWantToLogOut: "Вы уверены, что хотите выйти?",
   number: "Число",
   yourNumberPrime: "Введенное вами число является простым!",
   delete: "Удалить",
