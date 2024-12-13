@@ -110,7 +110,7 @@ const LoginPage = () => {
                     className=" text-sm mb-1 dark:text-white"
                     htmlFor="username"
                   >
-                    {lang.email}
+                    {lang.username}
                   </label>
                   <div className="flex dark:text-white items-center gap-2 border-2 rounded border-gray-600 dark:border-gray-400 px-2 py-1">
                     <PersonIcon width="32px" height="32px" />

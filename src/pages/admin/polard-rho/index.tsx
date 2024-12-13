@@ -29,6 +29,10 @@ const PolardRhoPage = () => {
         },
       });
       setData(data.number);
+
+      toast.info(
+        `Misolni hisoblash uchun ketgan vaqt: ${data.time} millisekund`
+      );
       toast.success(data.message);
       setLoading(false);
     } catch {

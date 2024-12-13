@@ -28,6 +28,9 @@ const FermaPage = () => {
         },
       });
       setData(data.number);
+      toast.info(
+        `Misolni hisoblash uchun ketgan vaqt: ${data.time} millisekund`
+      );
       toast.success(data.message);
       setLoading(false);
     } catch {
@@ -46,8 +49,8 @@ const FermaPage = () => {
           Bu usul oddiy sonlarni ikki kvadrat ayirmasi ko‘rinishida ifodalashga
           asoslangan. Formulasi: N=a<sup>2</sup>-b<sup>2</sup> bu yerda N
           faktorizatsiya qilinayotgan son, a va b esa natural sonlar. Ishlash
-          prinsipi: a<sup>2</sup>{" "}
-          sonini b<sup>2</sup> bilan bog‘lab, natijada a+b va a−b ni topish.
+          prinsipi: a<sup>2</sup> sonini b<sup>2</sup> bilan bog‘lab, natijada
+          a+b va a−b ni topish.
         </p>
       </div>
       <form onSubmit={handleSubmit(onSubmit)} className=" p-4 md:gap-5">

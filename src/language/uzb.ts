@@ -10,7 +10,7 @@ const UZB = {
   totalUsers: "Jami foydalanuvchilar soni",
   search: "Qidirish",
   edit: "Tahrirlash",
-  username: "Foydalanuvchi nome",
+  username: "Foydalanuvchi nomi",
   polardRho: "Polard-RHO",
   squareReminder: "Kvadrat Qoldiq",
   ferma: "Ferma",
